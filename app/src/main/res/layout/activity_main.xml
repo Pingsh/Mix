@@ -70,6 +70,7 @@
             android:text="Flex"/>
 
         <Button
+            android:layout_marginBottom="10dp"
             android:id="@+id/btn_dagger"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
