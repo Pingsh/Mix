@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="product"
+            type="com.example.sphinx.mix.entity.Product"
+            />
+
+        <variable
+            name="selection"
+            type="com.example.sphinx.mix.view.OrderDialogFragment.OrderSelection"
+            />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/btn_go"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/botton_sheet_height"
+        android:background="@color/product_purple"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        tools:layout_height="440dp"
+        >
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@{product.name}"
+            android:textAppearance="@style/ConfirmationTextAppearance.Title"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="The skyrider"
+            />
+
+        <TextView
+            android:id="@+id/txt_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/vd_done"
+            android:drawablePadding="@dimen/spacing_medium"
+            android:drawableTint="@color/white"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:text="@string/message_order_placed"
+            android:textAppearance="@style/ConfirmationTextAppearance.SubTitle"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_title"
+            app:layout_constraintRight_toRightOf="@+id/txt_title"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title"
+            />
+
+        <TextView
+            android:id="@+id/txt_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_big"
+            android:text="@{@string/txt_label_conf_size(selection.size)}"
+            android:textAppearance="@style/ConfirmationTextAppearance.Body"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_date"
+            app:layout_constraintTop_toBottomOf="@+id/txt_date"
+            tools:text="Size: 10"
+            />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:fontFamily="sans-serif"
+            android:text="@{@string/txt_label_conf_time(selection.time)}"
+            android:textAppearance="@style/ConfirmationTextAppearance.Body"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_size"
+            app:layout_constraintTop_toBottomOf="@+id/txt_size"
+            tools:text="Time: PM 1-2"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@{@string/txt_label_conf_date(selection.date)}"
+            android:textAppearance="@style/ConfirmationTextAppearance.Body"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_color"
+            app:layout_constraintTop_toBottomOf="@+id/txt_color"
+            tools:text="Date: tomorrow 02"
+            />
+
+        <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:layout_marginRight="@dimen/spacing_big"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/img_sneaker"
+            app:layout_constraintHorizontal_bias="0.41"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/txt_color"
+            app:layout_constraintTop_toBottomOf="@+id/txt_subtitle"
+            tools:ignore="ContentDescription"
+            />
+
+        <TextView
+            android:id="@+id/txt_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color: #0D0047"
+            android:textAppearance="@style/ConfirmationTextAppearance.Body"
+            app:layout_constraintLeft_toRightOf="@+id/img_product"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/img_product"
+            />
+
+        <TextView
+            android:id="@+id/txt_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/txt_conf_message"
+            android:textAppearance="@style/ConfirmationTextAppearance.Body"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_price"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/txt_price"
+            app:layout_constraintTop_toTopOf="@+id/txt_price"
+            />
+
+        <TextView
+            android:id="@+id/txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginTop="64dp"
+            android:text="@{product.price}"
+            android:textAppearance="@style/ConfirmationTextAppearance.Body"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/txt_message"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_product"
+            tools:text="$ 23"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginRight="@dimen/spacing_big"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_title"
+
+            tools:ignore="ContentDescription"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

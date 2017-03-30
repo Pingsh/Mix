@@ -1,0 +1,127 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <!--
+            <item name="android:actionOverflowButtonStyle">@style/MyOverflowStyle</item>
+            &lt;!&ndash; Customize your theme here. &ndash;&gt;
+            <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert</item>
+            <item name="android:windowBackground">@null</item>
+            <item name="android:windowAnimationStyle">@style/NoAnimation</item>-->
+</style>
+
+
+    <style name="MyOverflowStyle" parent="@android:style/Widget.ActionButton.Overflow">
+        <item name="android:src">@drawable/actionbar_more</item>
+    </style>
+    <style name="NoAnimation">
+
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+
+    </style>
+
+    <style name="AppTheme.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert"></style>
+
+    <style name="FullScreenDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="topright_dialog">
+        <item name="android:windowEnterAnimation">@anim/window_top_right_in</item>
+        <item name="android:windowExitAnimation">@anim/window_top_right_out</item>
+    </style>
+
+    <style name="AppTheme.AppCompat.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:maxWidth">1080px</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DialogButton" />
+
+    <!--ViewSwitcher-->
+    <style name="Widget"/>
+
+    <style name="Widget.Size">
+        <item name="android:layout_width">@dimen/product_color_size</item>
+        <item name="android:layout_height">@dimen/product_color_size</item>
+        <item name="android:background">@drawable/bg_circle_size</item>
+        <item name="android:textColor">@drawable/selector_order_text</item>
+        <item name="android:textSize">@dimen/font_size_medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.SelectedItem">
+        <item name="android:textColor">@color/blue_grey_700</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Widget.Color">
+        <item name="android:layout_width">@dimen/product_color_size</item>
+        <item name="android:layout_height">@dimen/product_color_size</item>
+    </style>
+
+    <style name="Widget.Label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/blue_grey_400</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Widget.DateTime">
+        <item name="android:minWidth">75dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_square_date</item>
+        <item name="android:textColor">@color/csl_date</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/spacing_medium</item>
+    </style>
+
+    <style name="ConfirmationTextAppearance" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ConfirmationTextAppearance.Title">
+        <item name="android:textSize">19sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="ConfirmationTextAppearance.SubTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="ConfirmationTextAppearance.Body">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+</resources>

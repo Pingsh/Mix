@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.sphinx.mix.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar_layout"
+        android:gravity="center_horizontal"
+        android:padding="30dp">
+
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="建立"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btn_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_start"
+            android:text="请求"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btn_jump"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_request"
+            android:text="下载"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btn_coo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_jump"
+            android:text="联动"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btn_flex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_coo"
+            android:text="Flex"/>
+
+        <Button
+            android:id="@+id/btn_dagger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_flex"
+            android:text="Dagger"/>
+
+        <Button
+            android:id="@+id/btn_dagger2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_dagger"
+            android:text="Dagger2"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Flex</string>
+
+    <string name="flex_lable">FlexboxLayout示例</string>
+    <string name="flex_direction" translatable="false">Flex Direction</string>
+    <string name="flex_wrap" translatable="false">Flex Wrap</string>
+    <string name="justify_content" translatable="false">Justify Content</string>
+    <string name="align_items" translatable="false">Align Items</string>
+    <string name="align_content" translatable="false">Align Content</string>
+
+    <string name="one" translatable="false">1</string>
+    <string name="two" translatable="false">2</string>
+    <string name="three" translatable="false">3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>

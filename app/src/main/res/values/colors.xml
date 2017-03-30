@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="lightPink">#FFCEE1</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="text_color">#FF000000</color>
+
+    <!-- theme color -->
+    <color name="theme_color_primary">#d20000</color>
+
+    <color name="pink">#fb7299</color>
+    <color name="pink_dark">#b85671</color>
+    <color name="pink_trans">#99f0486c</color>
+
+    <color name="blue">#2196F3</color>
+    <color name="blue_dark">#1565C0</color>
+    <color name="blue_trans">#B41A78C3</color>
+
+    <color name="purple">#673AB7</color>
+    <color name="purple_dark">#311B92</color>
+    <color name="purple_trans">#99673AB7</color>
+
+    <color name="green">#4CAF50</color>
+    <color name="green_dark">#2E7D32</color>
+    <color name="green_trans">#994CAF50</color>
+
+    <color name="green_light">#8BC34A</color>
+    <color name="green_light_dark">#558B2F</color>
+    <color name="green_light_trans">#998BC34A</color>
+
+    <color name="yellow">#FDD835</color>
+    <color name="yellow_dark">#FBC02D</color>
+    <color name="yellow_trans">#99FDD835</color>
+
+    <color name="orange">#FF9800</color>
+    <color name="orange_dark">#EF6C00</color>
+    <color name="orange_trans">#99FF9800</color>
+
+    <color name="red">#F44336</color>
+    <color name="red_dark">#C62828</color>
+    <color name="red_trans">#99F44336</color>
+
+
+    <!-- ViewSwitcher -->
+    <color name="white">#FFF</color>
+    <color name="grey_800">#565656</color>
+    <color name="blue_grey_400">#90A4AE</color>
+    <color name="blue_grey_700">#455a64</color>
+    <color name="blue_grey_900">#37474F</color>
+
+    <color name="product_yellow">#FDBC56</color>
+    <color name="product_blue">#2DA6F2</color>
+    <color name="product_green">#7ECB59</color>
+    <color name="product_purple">#746AE7</color>
+    <color name="product_red">#B54B36</color>
+
+    <!-- 文字颜色 -->
+    <color name="tc0">#ffffff</color>
+    <color name="tc1">#333333</color>
+    <color name="tc2">#666666</color>
+    <color name="tc3">#999999</color>
+    <color name="tc4">#bbbbbb</color>
+    <color name="tc5">#0cb7f5</color>
+    <color name="tc6">#cccccc</color>
+    <color name="tc7">#1398ec</color>
+
+    <color name="tutorial_tc">#13c26e</color>
+    <color name="tc_addtion">#f54949</color>
+    <color name="bc_addtion">#fff9c9</color>
+</resources>

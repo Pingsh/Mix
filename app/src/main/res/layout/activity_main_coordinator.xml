@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context="com.example.sphinx.mix.MainCoordinatorActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar_layout"
+        android:layout_margin="30dp">
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btn_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/back_top"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btn_zhihu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_top"
+            android:text="@string/coordinator"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btn_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_zhihu"
+            android:text="@string/down_cover"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_cover"
+            android:text="@string/slide_delete"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btn_vs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_delete"
+            android:text="@string/viewSwitcher"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

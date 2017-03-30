@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="calendar"
+            type="com.example.sphinx.mix.entity.Calendar"
+            />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:popupTheme="@style/AppTheme.PopupOverlay"></android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appbar_layout"
+            android:layout_margin="32dp">
+
+            <EditText
+                android:id="@+id/et_date"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tc3"/>
+
+            <Button
+                android:id="@+id/search_dagger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/et_date"
+                android:text="查询"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_edit"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl_lunar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_fix_lunar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="农历"
+                        android:textColor="@color/tc3"
+                        android:textSize="36sp"/>
+
+                    <TextView
+                        android:gravity="end"
+                        android:id="@+id/tv_lunar"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@={calendar.result.data.lunar}"
+                        android:textColor="@color/tc3"
+                        android:textSize="36sp"
+                        tools:text="二月二十七"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_date"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{calendar.result.data.lunarYear}"
+                        android:textColor="@color/tc6"
+                        android:textSize="16sp"
+                        tools:text="丁酉"/>
+
+                    <TextView
+                        android:id="@+id/tv_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_01"
+                        android:paddingLeft="10dp"
+                        android:text="@{calendar.result.data.animalsYear}"
+                        android:textColor="@color/tc6"
+                        android:textSize="16sp"
+                        tools:text="鸡"/>
+
+                    <TextView
+                        android:id="@+id/tv_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_02"
+                        android:paddingLeft="20dp"
+                        android:text="@{calendar.result.data.date}"
+                        android:textColor="@color/tc6"
+                        android:textSize="16sp"
+                        tools:text="2017-3-24"/>
+
+                    <TextView
+                        android:id="@+id/tv_04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_03"
+                        android:paddingLeft="10dp"
+                        android:text="@{calendar.result.data.weekday}"
+                        android:textColor="@color/tc6"
+                        android:textSize="16sp"
+                        tools:text="星期五"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_yi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_lunar"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="48dp">
+
+                <ImageView
+                    android:id="@+id/yi"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/yi"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/tv_yi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/yi"
+                    android:paddingLeft="20dp"
+                    android:text="@{calendar.result.data.suit}"
+                    android:textSize="24sp"
+                    tools:text="哈哈 哈哈 哈哈哈 哈哈哈 哈哈"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_yi"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/ji"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ji"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/tv_ji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/ji"
+                    android:paddingLeft="20dp"
+                    android:text="@{calendar.result.data.avoid}"
+                    android:textSize="24sp"
+                    tools:text="哈哈 哈哈 哈哈 哈哈 哈哈 哈哈哈"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</layout>

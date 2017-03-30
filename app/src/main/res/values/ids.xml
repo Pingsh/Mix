@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="first_position" type="id"/>
+    <item name="second_position" type="id"/>
+
+    <item name="titlebar" type="id"></item>
+    <item name="content" type="id"></item>
+
+    <item name="cb_code" type="id"></item>
+    <item name="tv_date" type="id"></item>
+</resources>
