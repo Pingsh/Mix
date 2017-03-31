@@ -9,5 +9,7 @@ RxJava基本使用&amp;自定义Behavior联动&amp;FlexLayout基础&amp;Dagger2+
 * 花费时间最多的一个模块，主要是因为踩坑。24.2.0以后的库对Behavior进行了修改，至今发现了两个大坑。一是对GONE的子布局不做处理，二是新增了属性peekHeightAuto，需要在布局里做处理。仿知乎的界面，实现了换肤功能，换肤功能来源于remusic,只知道重点API是对ActivityManager.TaskDescription的一些操作，原理还没有细看。此外，BottomSheetDialog是参考国外大神写的，是对BottomSheetDialog和DataBinding的一个基础示例，顺便折腾了共享元素和ConstraintLayout（默默吐槽一句，用得实在不顺手）。
 #### Flex 
 * 没花多少心思，后来干脆直接跳转到官方APP上进行尝试了，个人感觉这种流式布局还不是很完善，而且，我只要引入支持RecyclerView的那个库，就会报错，理解用法之后，无心深究，下次单独弄个仓库折腾
-#### Dagger2 
+#### Dagger
 * RRDD（Retrofit+RxJava+DataBinding+Dagger2） + MVP，本来想参考咕咚翻译的，有点小问题，预留给Dagger2完成。
+#### Dagger2
+* 同样是RRDD，和Dagger的区别在于V和P的处理，参考了谷歌 MVP+Dagger 的 官方Demo。
