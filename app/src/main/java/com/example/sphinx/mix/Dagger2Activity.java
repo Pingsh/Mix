@@ -1,5 +1,7 @@
 package com.example.sphinx.mix;
 
+import android.databinding.DataBindingUtil;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -13,24 +15,46 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sphinx.mix.dagger2.ApiHttpModule;
+import com.example.sphinx.mix.dagger2.CalendarPresenterModule;
+import com.example.sphinx.mix.dagger2.DaggerCalendarComponent;
+import com.example.sphinx.mix.dagger2.presenter.CalendarPresenter;
+import com.example.sphinx.mix.dagger2.presenter.CommonPresenter;
+import com.example.sphinx.mix.dagger2.view.CommonView;
+import com.example.sphinx.mix.databinding.ActivityDagger2Binding;
 import com.example.sphinx.mix.entity.Calendar;
 
-public class Dagger2Activity extends AppCompatActivity {
+import javax.inject.Inject;
+
+public class Dagger2Activity extends AppCompatActivity implements CommonView {
 
     private Button btnSearch;
     private EditText etDate;
 
     private Calendar mCalendar;
 
+    @Inject
+    CalendarPresenter mCalendarPresenter;
+    private boolean isLoading;
+    private RelativeLayout mSuccessLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dagger2);
-
+        ActivityDagger2Binding binding = DataBindingUtil.setContentView(this, R.layout.activity_dagger2);
         mCalendar = new Calendar();
+        binding.setCalendar(mCalendar);
+
+        DaggerCalendarComponent.
+                builder().
+                apiHttpModule(new ApiHttpModule()).
+                calendarPresenterModule(new CalendarPresenterModule(this)).
+                build().
+                inject(this);
 
         initToolbar();
         initView();
@@ -41,6 +65,8 @@ public class Dagger2Activity extends AppCompatActivity {
 
         btnSearch = (Button) findViewById(R.id.search_dagger);
         btnSearch.setEnabled(false);
+
+        mSuccessLayout = (RelativeLayout) findViewById(R.id.rl_success);
 
         initListener();
     }
@@ -91,7 +117,7 @@ public class Dagger2Activity extends AppCompatActivity {
         etDate.setText("");
         hideKeycode();
         if (checkInput(date)) {
-//            mPresenter.query(date, BuildConfig.JUHE_KEY, isLoading);
+            mCalendarPresenter.query(date, BuildConfig.JUHE_KEY, isLoading);
         }
     }
 
@@ -134,5 +160,33 @@ public class Dagger2Activity extends AppCompatActivity {
             finish();
         }
         return true;
+    }
+
+    @Override
+    public void loading() {
+
+    }
+
+    @Override
+    public void error(Throwable e) {
+
+    }
+
+    @Override
+    public void success(Calendar result) {
+        if (mSuccessLayout.getVisibility() == View.GONE) {
+            mSuccessLayout.setVisibility(View.VISIBLE);
+        }
+        mCalendar.setResult(result.getResult());
+    }
+
+    @Override
+    public void complete() {
+
+    }
+
+    @Override
+    public void setPresenter(CommonPresenter presenter) {
+
     }
 }
