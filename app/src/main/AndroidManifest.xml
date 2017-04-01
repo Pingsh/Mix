@@ -62,7 +62,23 @@
             android:label="@string/Dagger"
             android:windowSoftInputMode="adjustPan">
         </activity>
-        <activity android:name=".Dagger2Activity">
+        <activity
+            android:name=".Dagger2Activity"
+            android:label="@string/Dagger2">
+        </activity>
+
+        <meta-data
+            android:name="design_width"
+            android:value="720">
+        </meta-data>
+        <meta-data
+            android:name="design_height"
+            android:value="1080">
+        </meta-data>
+
+        <activity
+            android:name=".AutoActivity"
+            android:label="@string/Auto">
         </activity>
     </application>
 

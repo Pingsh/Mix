@@ -22,4 +22,6 @@
     <dimen name="spacing_huge">32dp</dimen>
     <dimen name="item_bottom_padding">42dp</dimen>
     <dimen name="img_form_size">56dp</dimen>
+
+    <dimen name="screen_margin">24px</dimen>
 </resources>

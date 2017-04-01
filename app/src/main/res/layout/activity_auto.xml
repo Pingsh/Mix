@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sphinx.mix.AutoActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_auto"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="#ffffff">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sickbed_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_sickbed_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:maxLines="1"
+                android:paddingLeft="24px"
+                android:text="Nick"
+                android:textColor="@color/tc2"
+                android:textSize="30px"/>
+
+            <TextView
+                android:id="@+id/tv_sickbed_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_sickbed_name"
+                android:layout_marginLeft="15dp"
+                android:text="20"
+                android:textColor="@color/tc4"
+                android:textSize="24px"/>
+
+            <TextView
+                android:id="@+id/tv_sickbed_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="女"
+                android:textColor="@color/tc4"
+                android:textSize="24px"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ywjj"
+            android:layout_width="60dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="24px"
+            android:background="@drawable/bg_sickbed_ywjj"
+            android:text="药物禁忌"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24px"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sickbed_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_sickbed_user"
+        android:background="@color/white"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="24px"
+        android:paddingRight="24px"
+        android:paddingTop="15dp"
+        android:text="名余曰正则兮，字余曰灵均。纷吾既有此内美兮，又重之以修能。扈江离与辟芷兮，纫秋兰以为佩。汨余若将不及兮，恐年岁之不吾与。"
+        android:textColor="@color/tc2"
+        android:textSize="26px"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_hisname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_sickbed_address"
+        android:background="@color/white"
+        android:paddingLeft="24px"
+        android:paddingRight="24px"
+        android:paddingTop="20dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_fixname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="医院名称:  "
+            android:textColor="@color/tc2"
+            android:textSize="24px"/>
+
+        <TextView
+            android:id="@+id/tv_hisname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_fixname"
+            android:textColor="@color/tc3"
+            android:textSize="24px"
+            android:text="同济医院"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bednumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_hisname"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/screen_margin"
+        android:paddingRight="@dimen/screen_margin"
+        android:paddingTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_fixjc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="家床号码:  "
+            android:textColor="@color/tc2"
+            android:textSize="24px"/>
+
+        <TextView
+            android:id="@+id/tv_bednumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_fixjc"
+            android:text="10010"
+            android:textColor="@color/tc3"
+            android:textSize="24px"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_bednumber"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/screen_margin"
+        android:paddingRight="@dimen/screen_margin"
+        android:paddingTop="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_fixyujiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预交金额:  "
+                android:textColor="@color/tc2"
+                android:textSize="24px"/>
+
+            <TextView
+                android:id="@+id/tv_yjmoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥ 1000"
+                android:textColor="@color/tc3"
+                android:textSize="24px"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_fixqf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欠费金额:  "
+                android:textColor="@color/tc2"
+                android:textSize="24px"/>
+
+            <TextView
+                android:id="@+id/tv_qfje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥ 3000"
+                android:textColor="#fc5f35"
+                android:textSize="24px"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_his"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_money"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_tabs_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/tc7"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="#1398ec"
+            app:tabTextColor="@color/tc3"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/tc6"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_history"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_new_advice"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="新增医嘱"
+                    android:textColor="@color/tc0"
+                    android:textSize="32px"
+                    />
+
+                <View
+                    android:layout_width="2px"
+                    android:layout_height="match_parent"
+                    ></View>
+
+                <Button
+                    android:id="@+id/btn_new_bed"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="新增查床"
+                    android:textColor="@color/tc0"
+                    android:textSize="32px"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

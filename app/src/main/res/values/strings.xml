@@ -14,7 +14,7 @@
     <string name="viewSwitcher">BottomSheetDialog切换</string>
     <string name="Dagger">Dagger示例</string>
     <string name="Dagger2">Dagger2 示例</string>
-
+    <string name="Auto">布局适配</string>
 
 
     <string name="txt_label_conf_color">Color: %1s</string>

@@ -640,6 +640,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_flex).setOnClickListener(this);
         findViewById(R.id.btn_dagger).setOnClickListener(this);
         findViewById(R.id.btn_dagger2).setOnClickListener(this);
+        findViewById(R.id.btn_auto).setOnClickListener(this);
     }
 
     @Override
@@ -672,7 +673,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_dagger2:
                 Intent intent_d2 = new Intent(MainActivity.this, Dagger2Activity.class);
                 startActivity(intent_d2);
-
+                break;
+            case R.id.btn_auto:
+                Intent intent_auto = new Intent(MainActivity.this, AutoActivity.class);
+                startActivity(intent_auto);
+                break;
             default:
                 break;
         }
