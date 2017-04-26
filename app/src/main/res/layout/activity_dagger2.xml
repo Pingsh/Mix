@@ -39,6 +39,7 @@
             android:layout_margin="32dp">
 
             <EditText
+                tools:text="2017-4-26"
                 android:hint="@string/hint"
                 android:id="@+id/et_date"
                 android:layout_width="200dp"
