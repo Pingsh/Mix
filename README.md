@@ -15,3 +15,6 @@ RxJava基本使用&amp;自定义Behavior联动&amp;FlexLayout基础&amp;Dagger2+
 * 同样是RRDD，和Dagger的区别在于V和P的处理，参考了谷歌 MVP+Dagger 的 官方Demo。
 #### MVVM
 * 初步上手了一下, 不是很会用, 等单独的module完成之后再上传.总结了一些东西, 不知道是否正确, 不太敢传上去, 怕误人子弟了...[总结在这里](http://note.youdao.com/noteshare?id=95e1cbb161f2c60d02287c603245795b), 有兴趣的可以看看.
+#### AutoActivity
+* 简单引入了[张鸿洋的自动布局](http://blog.csdn.net/lmj623565791/article/details/49990941), 只是一个基本尝试
+* 其中的TextView是重点, 从[TextView图文混排](http://www.jianshu.com/p/72d31b7da85b) get 到新知识, 解决了setMovementMethod(LinkMovementMethod.getInstance())之后, maxLines失效 , 文本可滑动的问题.比较实用的知识点,在即时通讯、评论等地方用得上， 推荐阅读和深挖.
