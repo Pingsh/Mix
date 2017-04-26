@@ -15,6 +15,7 @@
     <string name="Dagger">Dagger示例</string>
     <string name="Dagger2">Dagger2 示例</string>
     <string name="Auto">布局适配</string>
+    <string name="hint">查询格式：2017-4-26</string>
 
 
     <string name="txt_label_conf_color">Color: %1s</string>
@@ -35,5 +36,6 @@
     <string name="label_prefered_time">Preferred time</string>
     <string name="label_date">Preferred date</string>
     <string name="label_time">Preferred time</string>
+    <string name="title_activity_slanted">SlantedActivity</string>
 
 </resources>

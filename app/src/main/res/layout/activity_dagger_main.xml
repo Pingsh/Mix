@@ -39,6 +39,7 @@
             android:layout_margin="32dp">
 
             <EditText
+                android:hint="@string/hint"
                 android:id="@+id/et_date"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
